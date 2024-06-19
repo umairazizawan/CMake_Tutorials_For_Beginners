@@ -34,7 +34,7 @@ If you want to install your project as well as build it then you have to specify
     
     In the above command replace `<path-to-install-directory>` with the path to the install directory. Here we are telling cmake the location of the install directory, by default it is `/usr/local`.
 
-3. Now after the `make` command you need to do `make install` which will copy your program to the install folder.
+3. Now after the `make` command you need to do `make install` which will copy your program to the `install/bin` folder.
 
 ### GUI
 
