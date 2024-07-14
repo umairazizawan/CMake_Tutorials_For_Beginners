@@ -1,6 +1,3 @@
-#[[ To do Add context/purpose/use case
-]]
-
 # Set minimum version of CMake
 cmake_minimum_required(VERSION 3.13)  
 
@@ -14,8 +11,8 @@ project(CreateLibraryUsingCMake)
 
 #[[ Add the "include" folder, which contains HelloWorld.h, to the list of locations
  the compiler will search.
- In practical terms for the present case, the include_directories() command basically allows HelloWorld.cpp to find
- HelloWorld.h.
+ In practical terms, for the present case, the include_directories() command basically allows HelloWorld.cpp
+ to find HelloWorld.h.
  Both relative and Absolute paths can be provided. 
  Relative paths start from the location of CMakeLists.txt  
  ]]
@@ -25,7 +22,7 @@ include_directories(include)
  in a subfolder. This is useful when compiling large Projects.
  Note: If something is specificed in a Parent folder CMakeLists.txt such as a variable name, it will
  also be available to any CMakeLists.txt that exist in the subfolders, if it is specified as a subdirectory()
- In the present case, the include_directories could be taken as an example.
+ The above include_directories command could be taken as an example of this.
  ]]
 add_subdirectory(src)
 
@@ -34,19 +31,19 @@ add_subdirectory(src)
 ###################################################################################################
 
 # To do Add more details
-# If we just run the program without setting CMAKE_INSTALL_RPATH, the HelloWordProgram will not be able to locate the Library at RunTime
+# If we just run the program without setting CMAKE_INSTALL_RPATH, the HelloWordExecutable will not be able to locate the Library at RunTime
 # and exit with the following error.
-#./HelloWordProgram: error while loading shared libraries: libHelloWorldLibrary.so: cannot open shared object file: No such file or directory
+#./HelloWordExecutable: error while loading shared libraries: libHelloWorldLibrary.so: cannot open shared object file: No such file or directory
 # This is because by default CMake strips this variable when installing binaries....
 
 SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/bin/libraries")
 
 # Create Executable
-add_executable(HelloWordProgram main.cpp)
+add_executable(HelloWordExecutable main.cpp)
 
 #To do
-target_link_libraries(HelloWordProgram HelloWorldLibrary)
+target_link_libraries(HelloWordExecutable HelloWorldLibrary)
 
 # Install executable
-install(TARGETS HelloWordProgram)
+install(TARGETS HelloWordExecutable)
 

@@ -4,7 +4,7 @@
       Other types are STATIC and MODULE.
       Note: In general SHARED and STATIC are the commonly used types 
       The detailed differences and uses of each these in beyond the present scope.
-      But there are alot of excellent explanations available on the subject on Github and Stackoverflow for beginners.
+      But there are alot of excellent explanations available on the subject on Github and Stackoverflow.
    3. Files to compile (source files)
  ]]
 add_library(HelloWorldLibrary SHARED HelloWorld.cpp)
