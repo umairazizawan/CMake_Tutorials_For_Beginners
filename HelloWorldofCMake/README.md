@@ -8,7 +8,7 @@ This a very basic cmake project for beginners.
 
 First lets look at building the project without install.
 
-1. Create a folder named `build`
+1. Create a folder named `build` in the directory containing this README.md file.
 2. Inside the build folder run the command
     ```
     cmake ..
@@ -36,13 +36,17 @@ If you want to install your project as well as build it then you have to specify
 
 3. Now after the `make` command you need to do `make install` which will copy your program to the `install/bin` folder.
 
+4. Now Open a terminal in `install/bin` folder and run the executable with
+    ```
+    ./HelloWorld
+    ```
 ### GUI
 
 Open CMake-Gui. 
 
 
 1. Click "browse source" and navigate to the tutorial folder.
-2. Similarly Click "browse build" and provide path to the build folder created earlier
+2. Create build folder in the directory containing this README.md file. Click "browse build" and provide path to the build folder created earlier
 3. Click "Configure".
 4. Once configured, set the Install directory("install" folder location) as the value of "CMAKE_INSTALL_PREFIX".
 5. Click "Generate"
