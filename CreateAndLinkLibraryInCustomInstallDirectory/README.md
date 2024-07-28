@@ -1,4 +1,4 @@
-# CreateLibraryUsingCMake
+# CreateAndLinkLibraryWithCustomInstallDirectory
 
 This project creates a simple "HelloWorld" Library and links it to an executable.
 This is meant to cover a standard workflow of just creating your own library and then using it in another library or executable.
