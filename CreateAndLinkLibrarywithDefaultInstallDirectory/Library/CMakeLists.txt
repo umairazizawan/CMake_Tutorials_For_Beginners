@@ -1,3 +1,4 @@
+# Tell cmake the location of the header file
 include_directories(include)
 
 #[[Create an Library by providing the add_library command with three arguments: 
