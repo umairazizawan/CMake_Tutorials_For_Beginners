@@ -30,18 +30,18 @@ add_subdirectory(src)
 #                                                Utilize Library                                  #
 ###################################################################################################
 
-# To do Add more details
 # If we just run the program without setting CMAKE_INSTALL_RPATH, the HelloWordExecutable will not be able to locate the Library at RunTime
 # and exit with the following error.
 #./HelloWordExecutable: error while loading shared libraries: libHelloWorldLibrary.so: cannot open shared object file: No such file or directory
-# This is because by default CMake strips this variable when installing binaries....
+# This is because by default CMake strips this variable when installing binaries. This is because libraries are usually installed in `lib` or `usr/lib`.
+# These directories are included in the environment of every terminal session.
 
 SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/bin/libraries")
 
 # Create Executable
 add_executable(HelloWordExecutable main.cpp)
 
-#To do
+# Link Executable to Library
 target_link_libraries(HelloWordExecutable HelloWorldLibrary)
 
 # Install executable
